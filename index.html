@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkSheet</title>
+</head>
+
+<style>
+    body {
+        margin: 0%;
+        padding: 0;
+        background-color: rgb(234, 230, 116);
+    }
+    .section {
+        border: 10px solid brown;
+        margin: 10px;
+    }
+    .container {
+        margin: 50px;
+        padding: 0%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: inline;
+        height: 100px;
+        width: 100px;
+    }
+    .qr {
+        display: inline;
+        height: 100px;
+        width: 100px;
+        float: right;
+    }
+    .brown {
+        color: brown;
+    }
+    .container2 {
+        text-align: center;
+    }
+    .container3 {
+        margin: 38px;
+    }
+    .table1, .table2, .innertable, th, td {
+        text-align: center;
+        background-color: rgb(234, 230, 116);;
+        border: 2px solid brown;
+        border-collapse: collapse;
+    }
+    .table1, .table2, .innertable {
+        width: 100%;
+    }
+    .table2 {
+        margin-top: 20px;
+    }
+    .space {
+        padding: 15px;
+    }
+    .tot {
+        text-align: left;
+    }
+    button {
+        height: 17px;
+        width: 19px;
+        background-color: white;
+        border: 1px solid white;
+    }
+    input {
+        height: 12px;
+        width: 12px;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    @media only screen and (min-width:1260px) {
+        .space {
+            padding: 90px;
+        }
+        input {
+            height: 18px;
+            width: 18px;
+        }
+        button {
+            background-color: white;
+            height: 20px;
+            width: 24px;
+        }
+    }
+    @media only screen and (max-width:600px) {
+        .section {
+            border: 3px solid brown;
+            width: 100%;
+            padding: 0px;
+            margin: 0%;
+        }
+        .table2 {
+            width: 50%;
+        }
+    }
+</style>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <p>Sr.No.<span class="brown">0000111</span> </p>
+            <img src="assets/images-removebg-preview.png" class="logo" alt="logo">
+            <img src="assets/Untitled 1.png" class="qr" alt="qrcode">
+        </div>
+        <div class="container2">
+            <h1>Hindusthan College of Engineering and Technology</h1>
+            <h2>Associated with Technical and Paramedical Education Council</h2>
+            <h2>An Autonomous Institution Recognized by the Government of India</h2>
+            <h1>Annual Statement of Marks</h1>
+        </div>
+        <div class="container3">
+            <div>
+                <table class="table1">
+                    <tr>
+                        <th colspan="2">
+                            <p class="brown"> Name of the Candidate</p>
+                            <p><b>Rahul P G</b></p>
+                        </th>
+                        <th colspan="2">
+                            <p class="brown">Course name with Code</p>
+                            <p><b>Bachelor of Technology in AIML</b></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="brown">Reg.no</p>
+                            <p><b>72072115040</b></p>
+                        </td>
+                        <td>
+                            <p class="brown">Enrollment No.</p>
+                            <p><b>212333</b></p>
+                            <td colspan="2">
+                                <p class="brown">Authorized Training Centre</p>
+                                <p><b>Hindusthan Institutions</b></p>
+                            </td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table class="table2">
+                    <tr>
+                        <th><p class="brown">Subject Code</p></th>
+                        <th><p class="brown">Subject Name</p></th>
+                        <th><p class="brown">Max.Marks</p></th>
+                        <th>
+                            <table class="innertable">
+                                <tr>
+                                    <th colspan="3"><p class="brown">Marks Obtained in Figures</p></th>
+                                </tr>
+                                <tr>
+                                    <th><p class="brown">Theory</p></th>
+                                    <th><p class="brown">Practical</p></th>
+                                    <th><p class="brown">Total</p></th>
+                                </tr>
+                            </table>
+                        </th>
+                        <th>Total in words</th>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td>21AI4545</td>
+                        <td>Cloud Computing</td>
+                        <td>100</td>
+                        <td>
+                            <span class="space"><input type="number" class="theory" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="number" class="practical" oninput="calculateTotal(this)"></span>
+                            <span class="space"><input type="text" class="total" disabled></span>
+                        </td>
+                        <td><span class="words"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <p class="tot">Grand Total: <span class="brown" id="grandTotal">800</span></p>
+                            <p class="tot">in words: <span class="brown" id="grandTotalWords">Eight Hundred</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p class="brown">Month and Year of Examination</p></td>
+                        <td><p class="brown">No. of Subject Offered</p></td>
+                        <td><p class="brown">Result</p></td>
+                        <td><p class="brown">Pass Percentage </p></td>
+                        <td><p class="brown">Grade</p></td>
+                    </tr>
+                    <tr>
+                        <td><b>May 2020</b></td>
+                        <td><b>T5+T3=8</b></td>
+                        <td><b>Pass</b></td>
+                        <td><b>100%</b></td>
+                        <td><b>A</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <p class="date">Date: 02/07/24</p>
+                <span>
+                    <p class="sign">Bharani</p>
+                    <p class="brown be">Deputy Controller of Examination</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateTotal(input) {
+            let row = input.closest('tr');
+            let theory = parseFloat(row.querySelector('.theory').value) || 0;
+            let practical = parseFloat(row.querySelector('.practical').value) || 0;
+            let total = theory + practical;
+
+            // Set the total value in the corresponding input field
+            row.querySelector('.total').value = total;
+
+            // Convert the total to words and display
+            row.querySelector('.words').textContent = numberToWords(total);
+
+            // Update the grand total and total in words
+            updateGrandTotal();
+        }
+
+        function updateGrandTotal() {
+            let totalInputs = document.querySelectorAll('.total');
+            let grandTotal = 0;
+
+            totalInputs.forEach(input => {
+                grandTotal += parseFloat(input.value) || 0;
+            });
+
+            // Set the grand total and total in words
+            document.getElementById('grandTotal').textContent = grandTotal;
+            document.getElementById('grandTotalWords').textContent = numberToWords(grandTotal);
+        }
+
+        function numberToWords(num) {
+            const a = [
+                '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+                'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
+                'seventeen', 'eighteen', 'nineteen'
+            ];
+            const b = [
+                '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'
+            ];
+
+            if (num === 0) return 'zero';
+
+            let words = '';
+            if (num < 20) {
+                words = a[num];
+            } else if (num < 100) {
+                words = b[Math.floor(num / 10)] + ' ' + a[num % 10];
+            } else {
+                words = a[Math.floor(num / 100)] + ' hundred ' + (num % 100 === 0 ? '' : 'and ' + numberToWords(num % 100));
+            }
+            return words.trim();
+        }
+    </script>
+</body>
+
+</html>
